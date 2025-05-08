@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+D:\CS400\MICROCONTROLLER\program9.uv2
+Project File Date:  04/21/2025
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling program9.c...
+PROGRAM9.C(20): error C141: syntax error near 'int'
+PROGRAM9.C(20): error C202: 'i': undefined identifier
+PROGRAM9.C(20): error C202: 'i': undefined identifier
+PROGRAM9.C(20): error C202: 'i': undefined identifier
+PROGRAM9.C(20): error C141: syntax error near ')'
+Target not created
+Build target 'Target 1'
+compiling program9.c...
+linking...
+Program Size: data=22.0 xdata=0 code=367
+"program9" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>

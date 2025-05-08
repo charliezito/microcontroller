@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+D:\CS400\MICROCONTROLLER\program8.uv2
+Project File Date:  04/21/2025
+
+<h2>Output:</h2>
+compiling program8.c...
+program8.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=13.0 xdata=0 code=60
+"program8" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>
