@@ -1,0 +1,43 @@
+C51 COMPILER V8.05a   PROGRAM7                                                             04/28/2025 01:53:25 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE PROGRAM7
+OBJECT MODULE PLACED IN program7.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE program7.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void main()
+   3          {
+   4   1              unsigned long array [] = {0x335566666, 0xccaadd00, 0x55998888, 0x77664444, 0x11223344};
+   5   1              unsigned long temp, i,j;
+   6   1      
+   7   1              for (i=0;i<5; i++)
+   8   1              {
+   9   2                      for(j=0; j<5; j++)
+  10   2                      {
+  11   3                              if(array[j]>array[j+1])
+  12   3                              {
+  13   4                                      temp = array[j+1];
+  14   4                                      array [j+1] = array [j];
+  15   4                                      array[j] = temp;
+  16   4                              }
+  17   3                      }
+  18   2              }while(1);
+  19   1      }
+  20                  
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    223    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      32
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

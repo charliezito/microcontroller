@@ -1,0 +1,120 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             lar,code,readonly
+    2 00000000         entry
+    3 00000000 E59F0040        ldr              r0,=arr
+    4 00000004 E59F4040        ldr              r4,=large
+    5 00000008 E3A01004        mov              r1,#4
+    6 0000000C         
+    7 0000000C E4902004        ldr              r2,[r0],#4
+    8 00000010         
+    9 00000010 E4903004 
+                       back    ldr              r3,[r0],#4
+   10 00000014 E1520003        cmp              r2,r3
+   11 00000018 DA000000        ble              next
+   12 0000001C         
+   13 0000001C E1A02003        mov              r2,r3
+   14 00000020 E2511001 
+                       next    subs             r1,r1,#1
+   15 00000024 E3510000        cmp              r1,#0
+   16 00000028 DAFFFFF8        ble              back
+   17 0000002C E5842000        str              r2,[r4]
+   18 00000030 EAFFFFFE 
+                       exit    b                exit
+   19 00000034 00001234 
+              00005678 
+              00001111 
+              00002222 
+              00003333 arr     dcd              0x1234,0x5678,0x1111,0x2222,0x3
+333
+   20 00000048 00000000 
+              00000000         area             data1,data,readwrite
+   21 00000000 00000000 
+                       large   dcd              0
+   22 00000004                 end
+Command Line: --debug --xref --apcs=interwork --depend=.\p5.d -o.\p5.o -IC:\Kei
+l\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predefin
+e="__EVAL SETA 1" --list=.\p5.lst p5.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+arr 00000034
+
+Symbol: arr
+   Definitions
+      At line 19 in file p5.s
+   Uses
+      At line 3 in file p5.s
+Comment: arr used once
+back 00000010
+
+Symbol: back
+   Definitions
+      At line 9 in file p5.s
+   Uses
+      At line 16 in file p5.s
+Comment: back used once
+entry 00000000
+
+Symbol: entry
+   Definitions
+      At line 2 in file p5.s
+   Uses
+      None
+Comment: entry unused
+exit 00000030
+
+Symbol: exit
+   Definitions
+      At line 18 in file p5.s
+   Uses
+      At line 18 in file p5.s
+Comment: exit used once
+lar 00000000
+
+Symbol: lar
+   Definitions
+      At line 1 in file p5.s
+   Uses
+      None
+Comment: lar unused
+next 00000020
+
+Symbol: next
+   Definitions
+      At line 14 in file p5.s
+   Uses
+      At line 11 in file p5.s
+Comment: next used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+data1 00000000
+
+Symbol: data1
+   Definitions
+      At line 20 in file p5.s
+   Uses
+      None
+Comment: data1 unused
+large 00000000
+
+Symbol: large
+   Definitions
+      At line 21 in file p5.s
+   Uses
+      At line 4 in file p5.s
+Comment: large used once
+2 symbols
+341 symbols in table
